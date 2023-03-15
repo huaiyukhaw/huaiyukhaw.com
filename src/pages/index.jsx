@@ -297,7 +297,7 @@ export default function Home({ articles }) {
             passion lies in creating user-friendly and aesthetically pleasing
             applications that leverage cutting-edge technology.
           </p>
-          <div className="mt-6 flex items-center gap-6">
+          <div className="mt-6 flex flex-wrap items-center gap-6">
             <SocialLink
               href="https://linkedin.com/in/huaiyukhaw"
               aria-label="Follow on LinkedIn"
@@ -318,7 +318,7 @@ export default function Home({ articles }) {
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
             />
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <Button
                 href="https://zest.huaiyukhaw.com/huaiyukhaw"
                 alt="Huaiyu Khaw's CV"
