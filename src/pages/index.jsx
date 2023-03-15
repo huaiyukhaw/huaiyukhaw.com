@@ -233,7 +233,7 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="/cv.pdf"
+        href="/resume.pdf"
         alt="Huaiyu Khaw's CV"
         target="_blank"
         rel="noopener noreferrer"
@@ -331,7 +331,7 @@ export default function Home({ articles }) {
                 My Zest CV
               </Button>
               <Button
-                href="/cv.pdf"
+                href="/resume.pdf"
                 alt="Huaiyu Khaw's CV"
                 target="_blank"
                 variant="secondary"
