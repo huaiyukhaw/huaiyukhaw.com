@@ -8,7 +8,7 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   TwitterIcon,
-  InstagramIcon,
+  FacebookIcon,
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
@@ -18,9 +18,10 @@ import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoPallydeli from '@/images/logos/pallydeli.svg'
+// import logoFacebook from '@/images/logos/facebook.svg'
+// import logoPlanetaria from '@/images/logos/planetaria.svg'
+// import logoStarbucks from '@/images/logos/starbucks.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -84,6 +85,14 @@ function ArrowDownIcon(props) {
   )
 }
 
+function ZestIcon(props) {
+  return (
+    <svg viewBox="0 0 300 300" fill="#ffc233" aria-hidden="true" {...props}>
+      <path d="M213.98,76.18c7.87,10.8,5.01,22.81-6.72,29.08-2.76,1.48-5.57,2.87-8.36,4.32-24.84,12.93-49.71,25.82-74.51,38.84-4.53,2.38-8.51,2.07-12-1.51-3.48-3.58-3.93-7.67-1.2-12.02,1.22-1.94,2.29-3.98,3.32-6.03,13.05-25.95,26-51.95,39.15-77.85,5.37-10.58,15.93-13.76,25.87-7.37,7.87,5.06,15.09,11.16,20.79,15.45,5.57,6.94,9.83,11.86,13.65,17.09Zm21.45,119.38c1.52-3.37,3.74-6.59,4.45-10.12,3.33-16.39,3.31-32.88-.39-49.22-2.47-10.93-12.45-16.91-22.97-13.51-30.02,9.71-59.93,19.76-89.9,29.62-4.79,1.58-8.31,4.08-7.97,9.69,.32,5.31,3.51,7.94,8.47,9.48,29.34,9.12,58.64,18.38,87.92,27.72,7.43,2.37,13.98,1.62,20.39-3.66ZM63.78,24c-5.75,6.96-7.33,12.88-5.2,19.34,9.95,30.18,20.06,60.3,30.04,90.47,1.68,5.09,4.99,7.59,10.28,7.29,5.05-.28,6.72-3.78,8.09-8.13,9.03-28.69,18.28-57.31,27.41-85.97,5.1-16-.48-25.09-16.86-27.84-14.4-2.42-28.79-2.32-43.05,.68-4.34,.91-8.39,3.23-10.71,4.16Zm137.17,239.95c4.86-6.34,9.95-12.46,14.46-18.99,7.12-10.29,4.21-21.72-6.98-27.39-26.11-13.23-52.32-26.25-78.48-39.38-2.23-1.12-4.32-2.52-6.56-3.61-4.12-2-7.77-.96-10.87,2.16-2.95,2.96-3.91,6.4-1.89,10.3,14.83,28.56,29.54,57.19,44.59,85.64,5.38,10.16,16.95,12.83,26.35,6.32,6.69-4.63,12.89-9.97,19.39-15.05Z" />
+    </svg>
+  )
+}
+
 function Article({ article }) {
   return (
     <Card as="article">
@@ -139,36 +148,48 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
+      company: 'Pallydeli Group',
+      title: 'IT Executive and Sales Associate',
+      start: '2020',
+      end: '2021',
+    },
+    {
+      company: 'Inmagine Group',
+      title: 'Data Scientist Intern',
       start: '2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
+      end: '2020',
     },
-    {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
-    },
+    // {
+    //   company: 'Planetaria',
+    //   title: 'CEO',
+    //   logo: logoPlanetaria,
+    //   start: '2019',
+    //   end: {
+    //     label: 'Present',
+    //     dateTime: new Date().getFullYear(),
+    //   },
+    // },
+    // {
+    //   company: 'Airbnb',
+    //   title: 'Product Designer',
+    //   logo: logoAirbnb,
+    //   start: '2014',
+    //   end: '2019',
+    // },
+    // {
+    //   company: 'Facebook',
+    //   title: 'iOS Software Engineer',
+    //   logo: logoFacebook,
+    //   start: '2011',
+    //   end: '2014',
+    // },
+    // {
+    //   company: 'Starbucks',
+    //   title: 'Shift Supervisor',
+    //   logo: logoStarbucks,
+    //   start: '2008',
+    //   end: '2011',
+    // },
   ]
 
   return (
@@ -180,9 +201,9 @@ function Resume() {
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            {/* <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
-            </div>
+            </div> */}
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
               <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
@@ -211,8 +232,15 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
+      <Button
+        href="/cv.pdf"
+        alt="Huaiyu Khaw's CV"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
+        Download Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -251,58 +279,91 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
+          Huaiyu Khaw - Frontend developer, data scientist, and community
+          organizer.
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I'm Huaiyu Khaw, a software engineer based in Penang. My passion lies in creating user-friendly and aesthetically pleasing applications that leverage cutting-edge technology."
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Frontend developer, data scientist, and community organizer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I&apos;m Huaiyu Khaw, a software engineer based in Penang. My
+            passion lies in creating user-friendly and aesthetically pleasing
+            applications that leverage cutting-edge technology.
           </p>
-          <div className="mt-6 flex gap-6">
+          <div className="mt-6 flex items-center gap-6">
             <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
+              href="https://linkedin.com/in/huaiyukhaw"
+              aria-label="Follow on LinkedIn"
+              icon={LinkedInIcon}
             />
             <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
+              href="https://github.com/huaiyukhaw"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
+              href="https://facebook.com/huaiyukhaw517"
+              aria-label="Follow on Facebook"
+              icon={FacebookIcon}
             />
+            <SocialLink
+              href="https://twitter.com/huaiyukhaw"
+              aria-label="Follow on Twitter"
+              icon={TwitterIcon}
+            />
+            <div className="flex items-center gap-2">
+              <Button
+                href="https://zest.huaiyukhaw.com/huaiyukhaw"
+                alt="Huaiyu Khaw's CV"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                className="group"
+              >
+                <ZestIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+                My Zest CV
+              </Button>
+              <Button
+                href="/cv.pdf"
+                alt="Huaiyu Khaw's CV"
+                target="_blank"
+                variant="secondary"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                PDF Resume
+              </Button>
+            </div>
           </div>
         </div>
       </Container>
-      <Photos />
+      {/* <Photos /> */}
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
+            {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
-            ))}
+            ))} */}
+            <Card as="article">
+              <Card.Title href={`https://zest.huaiyukhaw.com/huaiyukhaw`}>
+                Zest CV
+              </Card.Title>
+              <Card.Description>
+                The profile builder for people in tech with robust work profiles
+                at its core.
+              </Card.Description>
+              <Card.Cta>View my profile in Zest CV</Card.Cta>
+            </Card>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/* <Newsletter /> */}
             <Resume />
           </div>
         </div>
