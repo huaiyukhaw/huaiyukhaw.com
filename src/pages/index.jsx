@@ -279,7 +279,7 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Huaiyu Khaw - Frontend developer, data scientist, and community
+          Huaiyu Khaw - Software engineer, data scientist, and community
           organizer.
         </title>
         <meta
@@ -290,7 +290,7 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Frontend developer, data scientist, and community organizer.
+            Software engineer, data scientist, and community organizer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Huaiyu Khaw, a software engineer based in Penang. My
