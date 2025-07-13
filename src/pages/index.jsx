@@ -148,6 +148,12 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
+      company: 'Orangeleaf Consulting',
+      title: 'Software Engineer',
+      start: '2023',
+      end: 'now',
+    },
+    {
       company: 'Pallydeli Group',
       title: 'IT Executive and Sales Associate',
       start: '2020',
